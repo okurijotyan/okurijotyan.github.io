@@ -22,7 +22,10 @@ Threads のプロフリンクから入る、リストイン用のページ一式
 - 確認用のスマホ幅の写し：`node _src/tools/shot.mjs pages _src/shots <URL>...`（ローカルで `python -m http.server 8787` を立ててから）。
 
 ## 公開のしかた
-変更をコミットして `git push` すると、1〜2分で公開URLに反映される。`_src/` は公開しない（`.gitignore`）。
+- 公開先：GitHub の組織 okurijotyan の置き場 `okurijotyan/okurijotyan.github.io`（GitHub Pages・無料）。2026-10-24 公開。
+- 直したら、このフォルダで `git add -A` → `git commit` → `git push`。1〜2分で公開URLに反映される。
+- このフォルダの Git は、記録の名前が okurijotyan になるよう設定済み（個人のアカウント名・メールを公開の記録に残さないため）。公開する枝は `main` だけ。公開前の作業の記録は、手元だけの枝 `作業記録` に残してある（送らない）。
+- `_src/` は公開しない（`.gitignore`）。
 
 ## 文の折り返し
 日本語を文節（意味のまとまり）で折り返すため、Google の BudouX（無料・Apache-2.0）を `assets/budoux/` に同梱し、`assets/phrase.js` で全ページに使っている。外部への通信はしない。
