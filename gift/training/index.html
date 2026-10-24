@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>誰でも現実がバグる引き寄せ基礎講座｜億り女ちゃん</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#071433">
+<link rel="icon" href="../../img/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@500;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css">
+<style>
+/* 基礎講座：読み物ページ（PC幅で広く） */
+.wrap.wide{max-width:880px;padding:28px 22px 80px}
+html{font-size:var(--fs,16px)}
+.k-banner{position:relative;border-radius:22px;overflow:hidden;border:1px solid rgba(240,214,150,.5);box-shadow:0 0 60px rgba(245,208,120,.2)}
+.k-banner img{display:block;width:100%;aspect-ratio:3/2;object-fit:cover}
+.k-badges{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:18px 0 6px}
+.k-badges span{display:flex;align-items:center;justify-content:center;min-width:128px;height:52px;padding:0 18px;border-radius:12px;font-weight:800;color:#1a1440;font-size:1.05rem;line-height:1;
+  background:linear-gradient(180deg,#fff3c4,#f2cf7a 55%,#c9962f);box-shadow:0 4px 14px rgba(0,0,0,.3)}
+.k-lead{font-size:1.05rem;line-height:2;margin-top:18px}
+.k-lead b{color:var(--glow2)}
+.k-howto{margin-top:16px;border:1px solid rgba(240,214,150,.4);border-left:4px solid var(--glow);border-radius:12px;background:rgba(9,24,62,.85)}
+.k-howto summary{cursor:pointer;padding:14px 18px;font-weight:700;color:var(--glow2);list-style:none}
+.k-howto summary::-webkit-details-marker{display:none}
+.k-howto summary:before{content:"＋ "}
+.k-howto[open] summary:before{content:"− "}
+.k-howto div{padding:0 18px 16px;font-size:.95rem;line-height:1.95}
+.k-bar{position:sticky;top:0;z-index:10;margin:24px -22px 0;padding:10px 22px;background:rgba(7,20,51,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(240,214,150,.3)}
+.k-bar-top{display:flex;align-items:center;justify-content:space-between;gap:10px;font-size:.85rem;color:var(--ink2)}
+.k-bar-top b{color:var(--glow2);font-size:1.05rem}
+.k-size{display:flex;gap:4px;align-items:center}
+.k-size button{border:1px solid rgba(240,214,150,.35);background:none;color:var(--ink);border-radius:6px;cursor:pointer;font-family:inherit;padding:2px 8px;line-height:1.4}
+.k-size button.on{background:var(--glow);color:#1a1440}
+.k-tabs{display:flex;gap:6px;overflow-x:auto;margin-top:8px;padding-bottom:2px;scrollbar-width:none}
+.k-tabs::-webkit-scrollbar{display:none}
+.k-tabs button{flex:0 0 auto;border:1px solid rgba(240,214,150,.35);background:rgba(255,255,255,.04);color:var(--ink);border-radius:99px;padding:7px 14px;cursor:pointer;font-family:inherit;font-size:.9rem;font-weight:700;white-space:nowrap}
+.k-tabs button.on{background:linear-gradient(180deg,#fff3c4,#f2cf7a 55%,#c9962f);color:#1a1440;border-color:transparent}
+.k-stage{margin-top:40px;text-align:center}
+.k-stage .n{display:inline-block;font-size:.8rem;letter-spacing:.3em;color:var(--glow)}
+.k-stage h2{font-family:"Shippori Mincho B1",serif;font-weight:800;font-size:1.9rem;margin-top:4px}
+.k-stage p{color:var(--ink2);font-size:.95rem}
+.k-step{margin-top:26px;border-radius:22px;padding:30px 34px 26px;border:1px solid rgba(240,214,150,.4);
+  background:radial-gradient(ellipse 80% 40% at 50% 0%,rgba(245,208,120,.12),transparent 70%),rgba(9,24,62,.9);box-shadow:0 14px 44px rgba(0,0,0,.35);scroll-margin-top:120px}
+.k-head{display:flex;align-items:center;gap:16px}
+.k-num{flex:0 0 64px;height:64px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1;color:#1a1440;
+  background:radial-gradient(circle at 35% 30%,#fff6d6,#f2cf7a 55%,#c9962f);box-shadow:0 0 22px rgba(245,208,120,.45)}
+.k-num small{font-size:.6rem;letter-spacing:.12em;font-weight:700}
+.k-num b{font-family:"Shippori Mincho B1",serif;font-size:1.6rem;font-weight:800}
+.k-head h3{flex:1;font-family:"Shippori Mincho B1",serif;font-weight:800;font-size:1.65rem;line-height:1.45}
+.k-save{flex:0 0 auto;border:1px solid rgba(240,214,150,.4);background:none;color:var(--ink2);border-radius:99px;padding:5px 12px;cursor:pointer;font-family:inherit;font-size:.8rem}
+.k-save.on{color:#1a1440;background:var(--glow);border-color:transparent}
+.k-slide{display:block;width:100%;max-width:620px;margin:22px auto 6px;border-radius:16px;border:1px solid rgba(240,214,150,.35);box-shadow:0 10px 30px rgba(0,0,0,.35)}
+.k-body p{font-size:1.06rem;line-height:2.05;margin:14px 0}
+.k-body b{background:linear-gradient(transparent 62%,rgba(245,208,120,.38) 62%);color:#fff;padding:0 2px}
+.k-point{margin:20px 0 6px;padding:16px 20px;border-radius:14px;border:1px solid rgba(240,214,150,.5);background:rgba(245,208,120,.1);display:flex;gap:14px;align-items:flex-start}
+.k-point i{flex:0 0 auto;font-style:normal;font-size:.75rem;font-weight:800;letter-spacing:.12em;color:#1a1440;background:linear-gradient(180deg,#fff3c4,#f2cf7a 55%,#c9962f);border-radius:6px;padding:3px 9px;margin-top:4px}
+.k-point p{font-family:"Shippori Mincho B1",serif;font-weight:800;font-size:1.25rem;line-height:1.6;color:var(--glow2)}
+.k-work{margin-top:18px;border-radius:14px;padding:16px 20px;border:1px dashed rgba(240,214,150,.55);background:rgba(7,20,51,.6)}
+.k-work .h{font-weight:800;color:var(--glow);letter-spacing:.1em;font-size:.9rem}
+.k-work ol{margin:8px 0 0 1.4em}
+.k-work li{font-size:1rem;line-height:1.85;margin:4px 0}
+.k-did{display:flex;align-items:center;gap:10px;margin-top:14px;cursor:pointer;font-weight:700;font-size:.95rem;width:max-content}
+.k-did input{width:20px;height:20px;accent-color:#f2cf7a}
+.k-cta{margin-top:34px;border-radius:24px;padding:4px;background:linear-gradient(135deg,#fff3c4,#f2cf7a 40%,#c9962f);box-shadow:0 0 50px rgba(245,208,120,.35),0 18px 44px rgba(0,0,0,.4)}
+.k-cta-in{border-radius:21px;padding:30px 34px 28px;background:radial-gradient(ellipse 90% 45% at 50% 0%,rgba(245,208,120,.22),transparent 70%),#0b1d4d}
+.k-cta .k{display:inline-block;font-size:.8rem;letter-spacing:.14em;font-weight:800;color:#1a1440;background:linear-gradient(180deg,#fff3c4,#f2cf7a 55%,#c9962f);border-radius:99px;padding:4px 14px}
+.k-cta h4{font-family:"Shippori Mincho B1",serif;font-weight:800;font-size:1.75rem;line-height:1.5;margin-top:14px;
+  background:linear-gradient(180deg,#fff6d6,#f6d77f 45%,#c9962f);-webkit-background-clip:text;background-clip:text;color:transparent}
+.k-cta .why{font-size:1.04rem;line-height:2;margin-top:10px}
+.k-cta .why b{background:linear-gradient(transparent 62%,rgba(245,208,120,.38) 62%);color:#fff}
+.k-cta .ans{margin-top:16px;padding:14px 18px;border-radius:14px;background:rgba(245,208,120,.1);border:1px solid rgba(240,214,150,.45);font-weight:700;line-height:1.9}
+.k-cta .prod{display:block;margin:20px auto 0;max-width:640px;border-radius:14px;overflow:hidden;border:1px solid rgba(240,214,150,.5);box-shadow:0 10px 30px rgba(0,0,0,.4)}
+.k-cta .prod img{display:block;width:100%}
+.k-cta ul{list-style:none;margin:16px auto 0;max-width:640px}
+.k-cta li{position:relative;padding:6px 0 6px 1.6em;font-size:1rem;line-height:1.75}
+.k-cta li:before{content:"✓";position:absolute;left:0;top:6px;color:var(--glow);font-weight:800}
+.k-cta .go{display:block;max-width:640px;margin:18px auto 0;text-align:center;font-weight:800;font-size:1.15rem;color:#1a1440;text-decoration:none;padding:18px;border-radius:99px;
+  background:linear-gradient(180deg,#fff3c4,#f2cf7a 50%,#c9962f);box-shadow:0 0 30px rgba(245,208,120,.5),0 8px 20px rgba(0,0,0,.35)}
+.k-cta .go:hover{filter:brightness(1.05)}
+.k-end .lead{font-size:1.02rem}
+.k-end h3.mincho{font-size:1.5rem}
+.k-thanks{margin-top:28px;text-align:center;padding:22px;border-radius:18px;border:1px dashed rgba(240,214,150,.5)}
+.k-thanks p{line-height:1.95}
+@media (max-width:640px){.k-cta-in{padding:22px 18px}.k-cta h4{font-size:1.35rem}}
+.k-empty{text-align:center;color:var(--ink2);margin-top:40px}
+@media (max-width:640px){.wrap.wide{padding:22px 14px 64px}.k-bar{margin:24px -14px 0;padding:10px 14px}.k-step{padding:22px 18px}.k-head h3{font-size:1.3rem}.k-num{flex-basis:54px;height:54px}.k-point p{font-size:1.1rem}}
+</style>
+</head>
+<body data-root="../../">
+<div class="sky"></div><canvas id="stars" aria-hidden="true"></canvas>
+<main class="wrap wide">
+
+  <div class="k-banner"><img src="../../img/slides/s00.jpg" alt="誰でも現実がバグる 引き寄せ基礎講座" onerror="this.src='../../img/gift-2.jpg'"></div>
+  <div class="k-badges"><span>図解つき</span><span>ワークつき</span><span>誰でもできる</span><span>ぜんぶ無料</span></div>
+
+  <p class="k-lead">手取り14万で、リボ払いに追われていた私が、年商10億の社長さんから教わって、毎日やってきたことをまとめました。<b>むずかしい知識はいりません。</b>上から順番に読んで、ワークを進めるだけです。</p>
+
+  <details class="k-howto">
+    <summary>はじめての人へ ― このページの使い方</summary>
+    <div>
+      <p>・上のタブで、3つの段階を切りかえられます。最初は「すべて」のまま、STEP 1から読むのがおすすめです。</p>
+      <p>・気になるステップは「保存」を押すと、「保存済み」のタブにまとまります。</p>
+      <p>・ワークをやったら「やった」にチェック。このページを開くたびに、何個やったかが分かります。</p>
+      <p>・文字が小さいときは、右上の「A」で大きくできます。</p>
+    </div>
+  </details>
+
+  <img class="k-slide" src="../../img/slides/s01.jpg" alt="11ステップ 全体マップ" onerror="this.remove()" style="max-width:100%;margin-top:26px">
+
+  <div class="k-bar" id="bar">
+    <div class="k-bar-top"><span>やったワーク <b id="didCnt">0</b> / 11</span>
+      <span class="k-size" aria-label="文字の大きさ">文字 <button type="button" data-fs="15px">A</button><button type="button" data-fs="16px" class="on">A</button><button type="button" data-fs="18px" style="font-size:1.1em">A</button><button type="button" data-fs="20px" style="font-size:1.25em">A</button></span></div>
+    <div class="k-tabs" id="tabs"></div>
+  </div>
+
+  <div id="steps"></div>
+  <p class="k-empty hide" id="empty">まだ保存したステップはありません。<br>気になるステップの「保存」を押すと、ここにまとまります。</p>
+
+  <section class="k-end" id="finish">
+    <aside class="k-cta"><div class="k-cta-in">
+      <div style="text-align:center">
+        <span class="k">COMPLETE</span>
+        <h4 style="font-size:2rem">基礎講座、完了<br>おめでとうございます。</h4>
+      </div>
+      <div class="why">
+        <p>あなたは今、ただ読み終えただけじゃありません。</p>
+        <p>自分の口ぐせに気づいて、不安とのつき合い方を知って、「本当はどうしたい？」に答えられるようになった。<b>現実が動きだす土台</b>が、もうできています。</p>
+      </div>
+      <ul class="checks" id="recap" style="margin-top:12px"></ul>
+      <p class="why">毎日全部やる必要はありません。迷った日は、好きなステップを1つだけ開き直してください。</p>
+
+      <h4 style="margin-top:30px;text-align:center">ここから先を、<br>あなた専用の一本道に</h4>
+      <div class="why">
+        <p>この講座は、誰でも今日から始められる土台です。でも、どのブロックが強くて、どこから外すと早いかは、人によってまったく違います。</p>
+        <p>「自分の場合は、何から、どの順番でやればいい？」を知りたい人のために、<b>あなた専用のロードマップ</b>をお作りしています。</p>
+      </div>
+      <a class="prod" id="noteImg" href="#" target="_blank" rel="noopener"><img src="../../img/note-roadmap.jpg" alt="60日で現実が動き始める パーソナル引き寄せロードマップ" loading="lazy"></a>
+      <ul id="prodList"></ul>
+      <a class="go" id="noteLink" href="#" target="_blank" rel="noopener">パーソナル引き寄せロードマップを見る →</a>
+
+      <div class="k-thanks">
+        <img class="avatar" src="../../img/icon.webp" alt="" width="84" height="84" style="width:84px;height:84px;margin:0 auto 10px">
+        <p>講座を終えた感想を、<b class="gold">ひとことだけでも</b>送ってもらえたら、とってもうれしいです。</p>
+        <p style="font-size:.92rem;color:var(--ink2);margin-top:4px">「ここが分かりやすかった」「これをやってみた」、どんなことでも大歓迎。<br>オプチャか、ThreadsのDMで待っています。</p>
+      </div>
+    </div></aside>
+  </section>
+
+  <p class="foot">億り女ちゃん｜秘密の花園 参加特典</p>
+</main>
+
+<script src="../../assets/common.js"></script>
+<script type="module" src="../../assets/phrase.js"></script>
+<script>
+var T = [
+  {t:"「私は、叶う側の人」を口ぐせにする", recap:"「私は、叶う側の人」を口ぐせにする",
+   body:["最初のステップは、すごくシンプル。<b>「私は、叶う側の人」</b>。これを、思い出すたびに口に出してください。",
+         "え、それだけ？って思いました？ 私も最初、社長さんに言われた時はそう思いました。",
+         "でも、人は自分が口にした言葉をいちばん近くで聞いている人です。毎日「どうせ私なんて」と言っていた私は、毎日それを自分に聞かせていたんです。",
+         "言っていて「いやいや、そんなわけない」と心の声が出てきたら、それでOK。今までの思い込みが、反応しているだけです。気にせず続けてください。"],
+   work:["朝起きた時と、寝る前に「私は、叶う側の人」と3回言う","できれば鏡を見て、口角を上げて","心の中で反論が出ても、そのまま続ける"]},
+  {t:"不安も、そのままでいい", recap:"不安や落ち込みを、追い出さずに認める",
+   body:["「不安になっちゃダメ」「ネガティブなことを考えたら引き寄せちゃう」。そうやって、自分を見張っていませんか。",
+         "実は、<b>追い出そうとするほど、その気持ちは大きくなります</b>。「考えちゃダメ」と思うほど、頭の中はそのことでいっぱいになる。",
+         "だから、不安な日は不安なままでいい。落ち込む日は落ち込んでいい。",
+         "大事なのは、そのあとに「それでも私は大丈夫」と、自分に一言かけてあげることです。"],
+   work:["「〜しちゃダメ」と思っていることを1つ書く","それを「〜してもいい」に書き換える（例：落ち込んでもいい）","最後に「それでも私は大丈夫」とつけて、声に出して読む"]},
+  {t:"「足りない」より「もうある」を数える", recap:"「足りない」より「もうある」を数える",
+   body:["手取り14万の頃の私は、毎日「足りない物」ばかり数えていました。お金も、時間も、自信も。",
+         "社長さんに言われたのは、「億る人は、<b>もう持っている物を数えるのが上手い</b>」ということ。",
+         "もうある物に目を向けると、気持ちに余裕が生まれます。余裕がある時のほうが、チャンスにも、いい話にも気づきやすい。",
+         "これは「無理に感謝しよう」という話ではありません。目の向け先を、ちょっと変えるだけの練習です。"],
+   work:["今の生活で「もうある物」を10個書く（小さな物でOK）","1つずつ見ながら「これは、もう持ってる」と言う","3日間続けてみる"]},
+  {t:"「それ、誰が決めたの？」", recap:"思い込みに「それ、誰が決めたの？」と聞く",
+   body:["「私には無理」「もうこの年だし」「お金持ちは性格が悪い」。",
+         "長く信じてきたことほど、<b>本当かどうか確かめたことがない</b>んです。",
+         "思い込みは、アクセルを踏みながらブレーキも踏んでいる状態。どれだけ頑張っても、前に進みにくい。",
+         "まずは、自分の中の「当たり前」に、1回だけ質問してみましょう。"],
+   work:["「私には無理」と思っていることを3つ書く","それぞれに「それ、誰が決めたの？」「本当に？」と書き足す","少しでも「そうでもないかも」と思えたら、それを1行メモする"]},
+  {t:"「本当は、どうしたい？」", recap:"迷ったら「本当は、どうしたい？」で選ぶ",
+   body:["「どっちが正しい？」「人にどう思われる？」。選ぶ時、外に答えを探していませんか。",
+         "でも、あなたの人生の答えは、<b>あなたの「本当はこうしたい」の中</b>にあります。",
+         "いきなり大きなことじゃなくていいんです。今日のランチ、今夜寝る時間、明日着る服。小さな選択を「したい」で選ぶ練習から始めます。",
+         "「したい」で選んだ日は、不思議と1日が軽くなりますよ。"],
+   work:["朝、「今日、本当はどうしたい？」と自分に聞く","迷ったら「どっちが気分がいい？」で選ぶ","選んだ自分に「いい選択！」と声をかける"]},
+  {t:"「好き」で毎日を埋める", recap:"「好き」を書き出して、毎日に増やす",
+   body:["最近、「これ好き」と思ったのはいつですか？",
+         "忙しい毎日の中で、自分の「好き」が分からなくなっている人は多いです。でも、<b>好きな物に囲まれている時の気分</b>こそが、引き寄せのいちばんの燃料です。",
+         "物だけじゃなく、人・場所・時間の使い方・SNSで見る物も。ちょっとずつ「好き」に入れかえていきましょう。"],
+   work:["好きな物・人・場所・音・香りを、思いつくだけ書く","その中から1つ、今日の生活に取り入れる","気分が下がる物を1つ、ありがとうと言って手放す"]},
+  {t:"未来の私を、今日体験する", recap:"叶った未来を、五感で先に味わう",
+   body:["願いが叶った私は、どんな朝を迎えているでしょう。",
+         "見える景色、聞こえる音、着ている服の手ざわり、飲んでいる物の香り。<b>五感で細かく思い浮かべる</b>ほど、未来は「遠い夢」から「知っている景色」に変わります。",
+         "ポイントは、ゆるんでいる時にやること。お風呂の中や、寝る前のぼーっとした時間がおすすめです。",
+         "そして、「絶対こうならなきゃ」ではなく「こうなったら最高だな」の気持ちで。"],
+   work:["叶った未来の1日を、日記のように1ページ書く（日付・時間・服・場所まで）","寝る前に読み返して、五感で味わう","最後に、明日できる小さな一歩を1つ決める"]},
+  {t:"叶い方は、ひとつじゃない", recap:"叶い方を1つに決めつけない",
+   body:["「月収を上げるには、今の仕事で頑張るしかない」。こんなふうに、叶い方を1つに決めていませんか。",
+         "私が億までいけたのも、最初に思い描いていた方法ではありませんでした。<b>道は、今の私が想像できる数より、ずっと多い</b>んです。",
+         "方法を決めすぎると、それ以外のチャンスが目に入らなくなります。「どうやって」は少しゆるめて、「どうなりたいか」をはっきりさせましょう。"],
+   work:["叶えたいことを1つ書く","その叶い方を、ありえなさそうな方法も含めて5つ書く","「方法はひとつじゃない」と声に出して、アンテナを張って過ごす"]},
+  {t:"ピンときたら、すぐ動く", recap:"ピンときたら、小さくすぐ動く",
+   body:["「なんとなく気になる」「ふとあの人を思い出した」。それは、あなたの中からのサインです。",
+         "引き寄せがうまくいかない人に多いのが、<b>願うけど、動かない</b>こと。どれだけノートに書いても、動かなければ現実は変わりません。",
+         "大きく動く必要はありません。気になった本を1ページ読む、思い出した人にLINEを1通送る。それで十分です。"],
+   work:["ピンときたことを、すぐスマホにメモする","その日のうちに、5分でできる一歩を1つやる","動けた自分に「ナイス！」と言う"]},
+  {t:"頑張るより、楽しむ", recap:"「頑張る」を「楽しむ」に変える",
+   body:["ここまで読んでくれたあなたは、きっと頑張り屋さんです。",
+         "でも、私がいちばん伝えたいのはこれ。<b>頑張るのをやめると、うまく回りだします</b>。",
+         "手取り14万の頃の私は、頑張って、我慢して、節約して、それでも何も変わりませんでした。変わり始めたのは、社長さんに「もっと楽しみなよ」と言われて、力を抜いた時からです。",
+         "「やらなきゃ」を「どうしたら楽しくできる？」に変えるだけで、同じことでも気分がまったく変わります。"],
+   work:["今やっている「やらなきゃ」を1つ書く","「どうしたら楽しくできる？」を3つ考える（好きな音楽・好きな場所・ご褒美など）","1つ選んで、楽しみながらやってみる"]},
+  {t:"人生は、私が主役の物語", recap:"つらい日も「物語の途中」と眺める",
+   body:["思い通りにいかない日、理不尽なこと、泣きたくなる夜。そんな時は、自分の人生を<b>1本の物語</b>だと思ってみてください。",
+         "物語の主人公には、必ずピンチがあります。ピンチがあるから、そのあとの展開が光る。",
+         "「今は物語の途中」「ここから巻き返す回だな」。そう眺められると、つらい気持ちに飲み込まれずにすみます。"],
+   work:["気持ちが大きく動いた時、「これは物語のどの場面？」と自分に聞く","「ここから、どう巻き返す？」を1つ考える","最後に「私の物語は、ここから良くなる」と言う"]}
+];
+var STAGES = [
+  {n:1, name:"ことばを変える", lead:"まずは、毎日の口ぐせと、心の中の声から。", steps:[0,1,2,3],
+   h:"ひとりで変えようとすると、<br>口ぐせはすぐ元に戻ります",
+   why:["どの言葉が、あなたの願いをいちばん止めているのか。それは、<b>自分ではなかなか気づけません</b>。","気づけないまま頑張ると、変えなくていい所ばかり変えて、遠回りになってしまいます。"],
+   ans:"パーソナル引き寄せロードマップでは、12問のヒアリングから、あなたの願いを止めている原因と、変える順番を一本の道にしてお渡しします。"},
+  {n:2, name:"本音を知る", lead:"「本当はどうしたい？」に、自分で答えられるように。", steps:[4,5,6],
+   h:"本音に気づいても、<br>何から始めるかで止まってしまう",
+   why:["やりたいことが見えてくるほど、選択肢は増えます。","全部やろうとして、結局どれも続かない。<b>いちばん多いつまずき方</b>が、ここです。"],
+   ans:"ロードマップでは、思考・行動・感情の3つの面から、あなたが先に取り組むことを、週ごとにまとめてお渡しします。"},
+  {n:3, name:"動いて流れに乗る", lead:"思い描いたら、小さく動く。楽しみながら。", steps:[7,8,9,10],
+   h:"最後に差がつくのは、<br>止まった日の戻り方です",
+   why:["動き始めた人ほど、落ち込む日や、手が止まる日が必ず来ます。","そのときに<b>戻る場所があるかどうか</b>で、その先が変わります。"],
+   ans:"ロードマップには、あなたの場合のやることに加えて、弱った日の立て直し方まで書いてお渡しします。"}
+];
+var PROD = ["12問のヒアリングで、あなたの願いと今の状態をうかがいます","思考・行動・感情の3つの面から、叶いにくくしている原因を言葉にします","週ごとのやることをまとめた、あなた専用のロードマップ（4,000字以上）"];
+function ctaHtml(s){
+  return '<aside class="k-cta"><div class="k-cta-in"><span class="k">STAGE ' + s.n + ' を終えたあなたへ</span>' +
+    '<h4>' + s.h + '</h4>' +
+    '<div class="why">' + s.why.map(function(p){ return '<p>' + p + '</p>'; }).join("") + '</div>' +
+    '<p class="ans">' + s.ans + '</p>' +
+    '<a class="prod" href="' + OKURI.note + '" target="_blank" rel="noopener"><img src="../../img/note-roadmap.jpg" alt="60日で現実が動き始める パーソナル引き寄せロードマップ" loading="lazy"></a>' +
+    '<a class="go" href="' + OKURI.note + '" target="_blank" rel="noopener">パーソナル引き寄せロードマップを見る →</a></div></aside>';
+}
+var POINT = ["口に出した言葉は、いちばん近くで自分が聞いている。","不安は追い出さずに、「それでも大丈夫」とセットにする。","足りない物より、もうある物に目を向ける。","長く信じてきたことほど、確かめたことがない。","大きな選択の前に、小さな選択を「したい」で選ぶ。","好きな物に囲まれた時の気分が、いちばんの燃料。","「こうならなきゃ」ではなく「こうなったら最高」。","「どうやって」はゆるめて、「どうなりたいか」をはっきり。","大きく動かなくていい。5分の一歩で十分。","頑張るのをやめると、うまく回りだす。","ピンチは、物語が光る前ぶれ。"];
+var saved = okuriStore("okuri_k_saved") || {}, did = okuriStore("okuri_k_did") || {}, tab = "all";
+function $(id){ return document.getElementById(id); }
+function stepHtml(k){
+  var x = T[k], n = k + 1, num = (n < 10 ? "0" : "") + n;
+  return '<article class="k-step" id="t' + n + '" data-k="' + k + '">' +
+    '<div class="k-head"><div class="k-num"><small>STEP</small><b>' + num + '</b></div><h3>' + x.t + '</h3><button type="button" class="k-save' + (saved[k] ? ' on' : '') + '" data-save="' + k + '">' + (saved[k] ? '保存済み' : '保存') + '</button></div>' +
+    '<img class="k-slide" src="../../img/slides/s' + (k + 2 < 10 ? '0' : '') + (k + 2) + '.jpg" alt="STEP ' + n + ' ' + x.t + '" loading="lazy" onerror="this.remove()">' +
+    '<div class="k-body">' + x.body.map(function(p){ return '<p>' + p + '</p>'; }).join("") + '</div>' +
+    '<div class="k-point"><i>POINT</i><p>' + POINT[k] + '</p></div>' +
+    '<div class="k-work"><p class="h">✦ 今日のワーク</p><ol>' + x.work.map(function(w){ return '<li>' + w + '</li>'; }).join("") + '</ol>' +
+    '<label class="k-did"><input type="checkbox" data-did="' + k + '"' + (did[k] ? ' checked' : '') + '>やった</label></div>' +
+    '</article>';
+}
+function render(){
+  var html = "";
+  if (tab === "saved") {
+    Object.keys(saved).filter(function(k){ return saved[k]; }).sort(function(a, b){ return a - b; }).forEach(function(k){ html += stepHtml(+k); });
+    $("empty").classList.toggle("hide", !!html);
+  } else {
+    $("empty").classList.add("hide");
+    STAGES.forEach(function(s){
+      if (tab !== "all" && tab != s.n) return;
+      html += '<div class="k-stage"><span class="n">STAGE ' + s.n + '</span><h2>' + s.name + '</h2><p>' + s.lead + '</p></div>';
+      s.steps.forEach(function(k){ html += stepHtml(k); });
+      html += ctaHtml(s);
+    });
+  }
+  $("steps").innerHTML = html;
+  okuriPhrase($("steps"));
+}
+function tabs(){
+  var list = [["all","すべて"]].concat(STAGES.map(function(s){ return [String(s.n), s.n + ". " + s.name]; })).concat([["saved","保存済み"]]);
+  $("tabs").innerHTML = list.map(function(t){ return '<button type="button" data-tab="' + t[0] + '" class="' + (String(tab) === t[0] ? 'on' : '') + '">' + t[1] + '</button>'; }).join("");
+}
+function countDid(){ var c = 0; for (var k in did) if (did[k]) c++; $("didCnt").textContent = c; }
+$("tabs").addEventListener("click", function(e){
+  var b = e.target.closest("button"); if (!b) return;
+  tab = b.getAttribute("data-tab"); tabs(); render();
+  var top = $("bar").getBoundingClientRect().top + scrollY; if (scrollY > top) scrollTo(0, top);
+});
+$("steps").addEventListener("click", function(e){
+  var b = e.target.closest("[data-save]"); if (!b) return;
+  var k = b.getAttribute("data-save"); saved[k] = !saved[k]; okuriStore("okuri_k_saved", saved);
+  b.classList.toggle("on", saved[k]); b.textContent = saved[k] ? "保存済み" : "保存";
+  okuriToast(saved[k] ? "保存しました" : "保存を外しました");
+  if (tab === "saved" && !saved[k]) render();
+});
+$("steps").addEventListener("change", function(e){
+  var c = e.target.closest("[data-did]"); if (!c) return;
+  did[c.getAttribute("data-did")] = c.checked; okuriStore("okuri_k_did", did); countDid();
+  if (c.checked) okuriToast("おつかれさまでした");
+});
+document.querySelector(".k-size").addEventListener("click", function(e){
+  var b = e.target.closest("button"); if (!b) return;
+  document.documentElement.style.setProperty("--fs", b.getAttribute("data-fs"));
+  document.querySelectorAll(".k-size button").forEach(function(x){ x.classList.toggle("on", x === b); });
+  okuriStore("okuri_k_fs", b.getAttribute("data-fs"));
+});
+var fs = okuriStore("okuri_k_fs"); if (fs) { var fb = document.querySelector('.k-size [data-fs="' + fs + '"]'); if (fb) fb.click(); }
+$("recap").innerHTML = T.map(function(x, k){ return '<li>STEP ' + (k + 1) + '：' + x.recap + '</li>'; }).join("");
+$("noteLink").href = OKURI.note;
+$("noteImg").href = OKURI.note;
+$("prodList").innerHTML = PROD.map(function(x){ return "<li>" + x + "</li>"; }).join("");
+tabs(); render(); countDid();
+okuriPhrase(document.querySelector("main"));
+</script>
+</body>
+</html>

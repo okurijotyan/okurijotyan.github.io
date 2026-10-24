@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>引き寄せブロック4タイプ診断｜億り女ちゃん</title>
+<meta name="description" content="引き寄せても現実が変わらないのは、引き寄せブロックのせいかも。あなたのブロックのタイプが30秒で分かります。">
+<meta name="theme-color" content="#071433">
+<meta property="og:type" content="website">
+<meta property="og:title" content="引き寄せブロック4タイプ診断｜億り女ちゃん">
+<meta property="og:description" content="あなたの願いが叶わない本当の理由、4タイプのどれ？ 全7問・30秒で診断。">
+<meta property="og:image" content="https://okurijotyan.github.io/img/ogp.jpg">
+<meta property="og:url" content="https://okurijotyan.github.io/shindan/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../img/icon-192.png">
+<link rel="apple-touch-icon" href="../img/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@500;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<style>.warn{color:#ffd98a;font-weight:700}</style>
+</head>
+<body data-root="../">
+<div class="sky"></div><canvas id="stars" aria-hidden="true"></canvas>
+<main class="wrap">
+
+  <!-- はじめ -->
+  <section id="intro" class="fade-in">
+    <img class="avatar" src="../img/icon.webp" alt="億り女ちゃん" width="104" height="104">
+    <h1 class="mincho" style="font-size:28px">引き寄せブロック<br><em>4タイプ診断</em></h1>
+    <p class="sub">あなたの願いが叶わない本当の理由、<br>4タイプのどれ？</p>
+    <div class="card">
+      <p class="lead">アファメーションも、ノートも、毎日やってる。</p>
+      <p class="lead">なのに、現実はなかなか変わらない。</p>
+      <p class="lead" style="margin-top:10px">……それ、<b>引き寄せブロック</b>が邪魔してます。</p>
+      <p class="lead" style="margin-top:10px">ブロックといってもタイプがあって、億女式では大きく<b>4つ</b>に分類しています。</p>
+      <p class="lead" style="margin-top:10px">全7問・30秒で、あなたのタイプと外し方のヒントが分かります。</p>
+    </div>
+    <button class="btn" id="startbtn" type="button">30秒で診断する<span class="arrow">→</span></button>
+  </section>
+
+  <!-- 質問 -->
+  <section id="quiz" class="hide" aria-live="polite">
+    <div class="qmeta"><span>Q<b id="qnum">1</b> <span style="opacity:.6">/ 7</span></span><span id="qpct">0%</span></div>
+    <div class="pbar"><i id="pfill"></i></div>
+    <div id="qbox">
+      <p class="qtext mincho" id="qtext"></p>
+      <div id="opts"></div>
+    </div>
+    <button class="linkbtn hide" id="backbtn" type="button">← 1つ戻る</button>
+  </section>
+
+  <!-- 結果 -->
+  <section id="result" class="hide">
+    <div style="text-align:center"><span class="badge">あなたのタイプ</span></div>
+    <img class="avatar" id="ricon" src="../img/icon.webp" alt="" width="120" height="120" style="width:140px;height:140px;margin:14px auto 8px" onerror="this.src='../img/icon.webp'">
+    <h2 class="rtitle mincho" id="rtitle"></h2>
+    <div class="card">
+      <div id="rbody"></div>
+      <div class="tonight" style="margin-top:16px">
+        <p class="sec-h" style="justify-content:center;margin:0 0 6px">外し方のヒント</p>
+        <div id="rfix"></div>
+      </div>
+    </div>
+    <p class="bridge mincho" id="rnote"></p>
+
+    <!-- オプチャ誘導 -->
+    <div class="offer" id="offer">
+      <div class="offer-body">
+        <p class="offer-h2"><small>オプチャ「秘密の花園」に参加すると</small><strong>2大特典プレゼント</strong></p>
+        <div class="gift">
+          <div>
+            <span class="gift-num">特典 ①</span>
+            <p class="gift-t">引き寄せ体質になる<br>行動チェックリスト（全16項目）</p>
+            <p class="gift-d">参加してすぐ受け取れる。言葉・心・お金・暮らしの4方向から、引き寄せ体質をつくる今日から使えるリスト。</p>
+          </div>
+        </div>
+        <div class="gift">
+          <div>
+            <span class="gift-num">特典 ②</span>
+            <p class="gift-t">誰でも現実がバグる<br>引き寄せ基礎講座</p>
+            <p class="gift-d">手取り14万の私が、年商10億の社長さんから教わったことをまとめました。むずかしい知識はいりません。ワークを順番に進めるだけで、誰でも今日から始められます。</p>
+          </div>
+        </div>
+        <ul class="checks">
+          <li>参加したらすぐ、オプチャのノートから特典①②が受け取れる</li>
+          <li>特典②は、ワークを順番に進めるだけ。むずかしい知識はいらない</li>
+          <li id="offerLi"></li>
+          <li>参加も受け取りも、ぜんぶ無料</li>
+        </ul>
+        <a class="btn chat" id="cta" href="#" target="_blank" rel="noopener">2大特典をオプチャで受け取る<span class="arrow">→</span></a>
+        <p class="cta-sub">タップ → LINEオープンチャットに参加 → ノートからすぐ特典①②が受け取れる。<br>参加5秒・無料・ニックネームOK。<br><span class="warn">※一度退出すると、二度と参加できません。</span></p>
+      </div>
+    </div>
+
+    <div class="share">
+      <button id="copylink" type="button">診断リンクをコピーして友達に送る</button>
+    </div>
+    <button class="linkbtn" id="restartbtn" type="button">もう一度診断する</button>
+  </section>
+
+  <p class="foot">億り女ちゃん｜引き寄せブロック4タイプ診断</p>
+</main>
+
+<script src="../assets/common.js"></script>
+<script type="module" src="../assets/phrase.js"></script>
+<script>
+// 各問4択。1=頑張らないと叶わない／2=不安が先に来る／3=考えすぎて動けない／4=願ったまま待っている。
+// 表示順は毎回ランダム（採点は順番に関係なし）
+var Q = [
+  {t:"「叶えたいこと」を思い浮かべた瞬間、最初に出てくるのは？",
+   o:[["「そのためには、もっと頑張らなきゃ」と予定を詰めたくなる",1],
+      ["「でも、もしダメだったら…」がすぐ横に浮かぶ",2],
+      ["「どうやったら叶うんだろう」と、やり方を調べたくなる",3],
+      ["叶った場面をうっとり想像して、そこで満足しちゃう",4]]},
+  {t:"引き寄せや金運の情報、どう付き合ってる？",
+   o:[["やると決めたら毎日きっちり。できなかった日は自分を責める",1],
+      ["「これをしないと運が下がる」系の話を見ると、ドキッとして気になる",2],
+      ["保存した投稿がたまる一方で、結局どれが正解か分からない",3],
+      ["読んで「いい話だな」と思って、それで終わることが多い",4]]},
+  {t:"久しぶりに、何の予定もない休日。どう過ごす？",
+   o:[["たまった家事や用事を片づけて、気づいたら1日が終わっている",1],
+      ["何もしていないと、お金や将来のことを考えて落ち着かない",2],
+      ["「有意義に過ごさなきゃ」と考えているうちに、夕方になる",3],
+      ["「こんな休日を過ごせたらな」と理想を想像して、結局いつもどおり",4]]},
+  {t:"夜、布団に入ってから考えていることは？",
+   o:[["明日やることの確認と、今日できなかったことの反省",1],
+      ["お金・家族・将来…「大丈夫かな」がぐるぐる回る",2],
+      ["「あの時こうしていれば」「あれってどういう意味？」の考え直し",3],
+      ["「いつかこうなれたらいいな」と想像して、気持ちよく眠る",4]]},
+  {t:"友達が「最近すごく調子いいんだ」と話してくれた。心の中は？",
+   o:[["「すごい。私ももっと頑張らないと」",1],
+      ["「いいな…それに比べて私は」と、少し焦る",2],
+      ["「何をしたんだろう。やり方を詳しく聞きたい」",3],
+      ["「いいなぁ。私にもそのうち来るといいな」",4]]},
+  {t:"誰かに「もう頑張らなくていいよ」と言われたら？",
+   o:[["「いや、頑張らないと何も変わらない」と思う",1],
+      ["ほっとする反面、「本当に？後で困らない？」と心配になる",2],
+      ["「じゃあ、何をすればいいの？」と具体的な方法が気になる",3],
+      ["「よかった〜」とほっとして、そのまま今のペースでいる",4]]},
+  {t:"3年後の「理想の私」を思い浮かべると？",
+   o:[["「そこまでいくには、今の何倍も頑張らなきゃ」と少し疲れる",1],
+      ["浮かべようとすると「現実は厳しい」が邪魔をして、ぼやける",2],
+      ["理想がいくつもあって、どれが本当の望みか決めきれない",3],
+      ["細かく浮かんでうっとりする。でも明日の予定はいつもどおり",4]]}
+];
+var BRIDGE = "診断で分かるのは、<br>あなたの理想を邪魔してる原因だけ。<br><br>でも、原因がわかっただけでは、<br>ブロックは外れません。<br>外すには、正しい知識が必要です。";
+var R = {
+  1:{li:'いま出た<b>「頑張らないと叶わない」タイプ</b>の外し方も、オプチャで随時公開していきます', title:"頑張らないと<br>叶わないと思っているタイプ", note:BRIDGE,
+     body:["あなたのブロックは、<b>「頑張らないと叶わない」</b>と思い込んでいるタイプです。",
+           "叶えたいことがあると、まず自分にムチを入れる。努力も我慢も節約も、ちゃんとできてしまう人。だからこそ、ずっと力が入りっぱなしで、願いが入ってくるすき間がなくなっています。",
+           "3年前の私も、まさにこれでした。手取り14万で、節約と我慢さえすれば何とかなると信じていた頃です。"],
+     fix:["・「やらなくても大丈夫だった」ことを、1日1個見つける","・我慢している節約を1つやめて、そのお金で自分を喜ばせる"]},
+  2:{li:'いま出た<b>「不安が先に来る」タイプ</b>の外し方も、オプチャで随時公開していきます', title:"願うより先に<br>不安が来るタイプ", note:BRIDGE,
+     body:["あなたのブロックは、<b>願うより先に不安が来る</b>タイプです。",
+           "願いを思い浮かべた瞬間、「でも、もしダメだったら」「来月の支払いは」と、不安が横から入ってくる。周りに気を配れて、責任感が強い人ほどこのタイプになります。",
+           "不安で頭がいっぱいの時は、願う余裕そのものが小さくなっています。願う力が弱いんじゃなくて、不安に席を取られているだけなんです。"],
+     fix:["・心配は頭の中で回さず、紙に全部書き出して閉じる","・「もしそうなったら、こうする」を1つだけ決めておく"]},
+  3:{li:'いま出た<b>「考えすぎて動けない」タイプ</b>の外し方も、オプチャで随時公開していきます', title:"考えすぎて<br>動けないタイプ", note:BRIDGE,
+     body:["あなたのブロックは、<b>考えすぎて動けない</b>タイプです。",
+           "保存した投稿、メモ、買った本。知識はたくさんあるのに、「どれが正解？」と考えているうちに日が過ぎていく。真面目で勉強熱心な人ほどこのタイプです。",
+           "足りないのは知識じゃなくて、1つに絞って動くこと。動いた人から、現実が変わっていきます。"],
+     fix:["・保存した情報から1つだけ選んで、今週はそれだけやる","・迷ったら「どっちが正しい？」ではなく「どっちが気分がいい？」で決める"]},
+  4:{li:'いま出た<b>「願ったまま待っている」タイプ</b>の外し方も、オプチャで随時公開していきます', title:"願ったまま<br>待っているタイプ", note:BRIDGE,
+     body:["あなたのブロックは、<b>願ったまま待っている</b>タイプです。",
+           "理想の暮らしを思い描くのは、とても上手。ワクワクする気持ちも、ちゃんと持てている。なのに、思い描いたところで満足して、現実の一歩が後回しになっています。",
+           "引き寄せをがんばっている人ほど、実はこのタイプが多いんです。想像は大事。ただ、想像のあとに小さく動いた人から、現実が変わっていきます。"],
+     fix:["・叶った場面を想像したら、すぐ後に「明日できる1分の行動」を1つ決める","・「いつか」と言っていることを1つ、カレンダーに日付で書く"]}
+};
+
+var i = 0, score = {1:0,2:0,3:0,4:0}, answers = [], view = [];
+function $(id){ return document.getElementById(id); }
+function shuffle(a){ a = a.slice(); for (var k = a.length - 1; k > 0; k--) { var j = Math.floor(Math.random() * (k + 1)); var t = a[k]; a[k] = a[j]; a[j] = t; } return a; }
+for (var n = 0; n < Q.length; n++) view.push(shuffle(Q[n].o));
+
+function start(){ $("intro").classList.add("hide"); $("quiz").classList.remove("hide"); render(); scrollTo(0,0); }
+function render(){
+  var q = Q[i], pct = Math.round(i / Q.length * 100);
+  $("qnum").textContent = i + 1; $("qpct").textContent = pct + "%"; $("pfill").style.width = pct + "%";
+  $("qtext").textContent = q.t;
+  var opts = $("opts"); opts.innerHTML = "";
+  view[i].forEach(function(o){
+    var b = document.createElement("button");
+    b.type = "button"; b.className = "opt"; b.setAttribute("data-type", o[1]);
+    b.innerHTML = '<span class="dot" aria-hidden="true"></span><span></span>';
+    b.lastChild.textContent = o[0];
+    opts.appendChild(b);
+  });
+  $("backbtn").classList.toggle("hide", i === 0);
+  okuriPhrase($("quiz"));
+}
+// 選んだら、すぐ次の質問へ（ナマケ隊長の診断と同じ動き）
+function choose(type){
+  score[type]++; answers.push(type);
+  if (i < Q.length - 1) { i++; render(); } else { finish(); }
+}
+function back(){ if (i === 0) return; i--; var last = answers.pop(); score[last]--; render(); }
+
+function finish(){
+  $("pfill").style.width = "100%";
+  // 4タイプの中で一番多い物（同点なら、後の質問で選んだほうを優先）
+  var best = null;
+  for (var k = answers.length - 1; k >= 0; k--) { var t = answers[k]; if (best === null || score[t] > score[best]) best = t; }
+  var r = R[best];
+  $("quiz").classList.add("hide"); $("result").classList.remove("hide");
+  $("ricon").src = "../img/type-" + best + ".jpg";
+  $("rtitle").innerHTML = r.title;
+  $("rbody").innerHTML = r.body.map(function(p){ return '<p class="lead">' + p + '</p>'; }).join("");
+  $("rfix").innerHTML = '<ul class="fixlist">' + r.fix.map(function(f){ return '<li>' + f.replace(/^・/, "") + '</li>'; }).join("") + '</ul>';
+  $("rnote").innerHTML = r.note;
+  $("offerLi").innerHTML = r.li;
+  $("cta").href = OKURI.openchat;
+  okuriPhrase($("result"));
+  scrollTo(0,0);
+}
+
+$("startbtn").addEventListener("click", start);
+$("backbtn").addEventListener("click", back);
+$("restartbtn").addEventListener("click", function(){ location.reload(); });
+$("opts").addEventListener("click", function(e){ var b = e.target.closest(".opt"); if (b) choose(parseInt(b.getAttribute("data-type"), 10)); });
+$("copylink").addEventListener("click", function(){
+  var url = location.href.split("#")[0];
+  var done = function(){ okuriToast("リンクをコピーしました"); };
+  if (navigator.clipboard) navigator.clipboard.writeText(url).then(done, function(){ prompt("このリンクをコピーしてください", url); });
+  else prompt("このリンクをコピーしてください", url);
+});
+</script>
+</body>
+</html>
