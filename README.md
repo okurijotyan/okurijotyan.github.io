@@ -17,7 +17,7 @@ Threads のプロフリンクから入る、リストイン用のページ一式
 - 診断の質問・結果の文：`shindan/index.html` の `Q`（質問）と `R`（結果）。
 - チェックリストの項目：`gift/checklist/index.html` の `G`。基礎講座の中身：`gift/training/index.html` の `T`。
 - 色・字の大きさ：`assets/style.css` の先頭（`:root`）。
-- 画像：`img/`。元の大きい画像は `_src/codex/`（公開しない）。作り直しは `_src/codex/依頼_画像.md` を Codex に渡す。
+- 画像：`img/`。元の大きい画像と依頼文は `_src/codex/`（公開しない。中の地図は `_src/README.md`）。
 - シェア用の画像（`img/ogp.jpg`）：`_src/ogp.html` を `node _src/tools/shot.mjs ogp <URL> <出力>` で撮る。
 - 確認用のスマホ幅の写し：`node _src/tools/shot.mjs pages _src/shots <URL>...`（ローカルで `python -m http.server 8787` を立ててから）。
 
